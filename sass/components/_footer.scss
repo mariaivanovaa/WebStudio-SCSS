@@ -1,0 +1,98 @@
+.footer-all {
+    display: flex;
+    padding: 60px 0 60px 215px;
+}
+
+.footer-right {
+    padding-top: 12px;
+   }
+     
+footer {
+        background-color: #2F303A;
+    }
+    
+.footer {
+        margin-right: 70px;
+    }
+
+.logo{
+    display: block;
+    margin-bottom: 20px;
+ font-family: 'Raleway';
+font-style: normal;
+font-weight: 700;
+font-size: 26px;
+line-height:1.19;
+letter-spacing: 0.03em;
+text-decoration:none ;
+color: #2196F3;
+}
+
+.studio{
+    color: #FFFFFF;
+}
+
+.address-link{
+    display: block;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71; 
+letter-spacing: 0.03em; 
+color: #FFFFFF;
+margin-bottom: 9px;
+}   
+
+.contact-link{
+    display: block;
+    font-family: Roboto;
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 1.71;
+letter-spacing: 0.03em;
+ color: rgba(255, 255, 255, 0.6);
+}
+
+ .contact-link:not(:last-child){
+    margin-bottom: 9px;
+ }
+
+ .footer-list {
+    display: flex;
+    width: 206px;
+    justify-content: space-between;
+ }
+
+.footer-title {
+    color: #FFF;
+font-size: 14px;
+font-weight: 700;
+line-height: normal;
+letter-spacing: 0.42px;
+text-transform: uppercase;
+margin-bottom: 20px;
+}
+
+.footer-list-link {
+     fill:#FFF;
+}
+
+.footer-list-item {
+    display: flex;
+    fill:#FFF;
+    border-radius: 50%;
+    background-color:rgba(255, 255, 255, 10%);
+    width: 44px;
+    height: 44px;
+    justify-content: center;
+    align-items: center;
+    transition: transform 400ms ease;
+}
+
+.footer-list-item:hover {
+    border-radius: 50%;
+    background-color: #2196F3;
+    transform: scale(1.2);
+}

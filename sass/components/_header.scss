@@ -1,0 +1,131 @@
+.full-header {
+    width: 1200px;
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+.header-left {
+    display: flex;
+    justify-content: left;
+    width: 519px;
+}
+
+.logo-link {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.19;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    color:#000000;
+    padding: 24px 93px 25px 0;
+}
+
+.web {
+    color:#2196F3;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    width: 281px;
+    align-items: center;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+}
+.nav-list-link {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    color:#212121;
+    position: relative;
+}
+
+.nav-list-link:hover, .nav-list-link:focus {
+    color:#2196F3;
+}
+
+.nav-list-link:hover::after {
+    width: 100%;
+    transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.nav-list-link::after {
+    content: "";
+    width: 0;
+    height: 4px;
+    background-color:  #2196F3; 
+    border-radius: 2px ;
+    position: absolute;
+    left: 0;
+    top: 45px;
+}
+
+.header-right {  
+    display: flex;
+    justify-content: space-between;
+    width: 333px;
+    align-items: center;
+}
+
+.contact-list-link {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    font-size: 14px;
+    line-height:1.14;
+    letter-spacing: 0.02em;
+    color: #757575;
+}
+.contact-list-link:hover {
+    color: #2196F3;
+    transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.contact-svg {
+   fill: #757575;
+   margin-right:10px;
+}
+
+.contact-list-link:hover .contact-svg{fill: #2196F3;}
+/* main */
+/* hero */
+
+.hero{
+    padding: 200px 0;
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img.hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    }
+
+.hero-title{
+text-align: center;
+text-transform: uppercase;
+font-weight: 900;
+font-size: 44px;
+line-height: 1.36;
+color: #FFFFFF;
+margin-bottom: 30px;
+}
+
+.hero-btn{
+    display: block;
+    margin: 0 auto;
+width: 216px;
+height: 50px;
+background: #2196F3;
+color: #FFFFFF;
+transition:  transform 500ms ease;
+border: none;
+border-radius: 4px;
+}
+
+.hero-btn:hover {
+    transform: scale(1.2);
+}
