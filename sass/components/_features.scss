@@ -4,64 +4,57 @@
     margin: 0 auto;
 }
 
-.list{
+.features-list{
     display: flex;
     justify-content:space-between;
     margin: 0 auto;
+    &__item{
+        width: 270px;
+        &::before{
+            display: block;
+            content: '';
+            background-color: #F5F4FA;
+            border-radius: 4px;
+            height: 120px;
+            width: 270px;
+            margin-bottom: 30px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 70px 70px;
+        }
+        &:nth-child(1)::before{
+            background-image: url(../images/antenna.svg);
+        }
+        &:nth-child(2)::before{
+            background-image: url(../images/clock.svg);
+        }
+        &:nth-child(3)::before{
+            background-image: url(../images/diagram.svg);
+        }
+        &:nth-child(4)::before{
+            background-image: url(../images/astronaut.svg);
+         }
+    }
+    &__title{
+        margin: 0;
+        padding-right: 30px ;
+        padding-bottom: 9.69px;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    color: #212121;
+    }
+    &__text{
+        margin: 0;
+        padding-right: 30px ;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    color: #757575;
+    }
 }
 
-.list-item{
-    width: 270px;
-}
-
-.list-item::before{
-    display: block;
-    content: '';
-    background-color: #F5F4FA;
-    border-radius: 4px;
-    height: 120px;
-    width: 270px;
-    margin-bottom: 30px;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-size: 70px 70px;
-}
-
-.list-item:nth-child(1)::before{
-   background-image: url(../images/antenna.svg);
-}
-
-.list-item:nth-child(2)::before{
-    background-image: url(../images/clock.svg);
-}
-
-.list-item:nth-child(3)::before{
-    background-image: url(../images/diagram.svg);
- }
- 
- .list-item:nth-child(4)::before{
-    background-image: url(../images/astronaut.svg);
- }
- 
 
 
 
 
-
-.list-item-title{
-    margin: 0;
-    padding-right: 30px ;
-    padding-bottom: 9.69px;
-font-weight: 700;
-font-size: 14px;
-line-height: 1.14;
-color: #212121;
-}
-.list-item-text{
-    margin: 0;
-    padding-right: 30px ;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-color: #757575;
-}

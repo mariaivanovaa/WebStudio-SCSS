@@ -5,6 +5,15 @@
 
 .footer-right {
     padding-top: 12px;
+    &__title {
+        color: #FFF;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: normal;
+    letter-spacing: 0.42px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    }
    }
      
 footer {
@@ -15,7 +24,7 @@ footer {
         margin-right: 70px;
     }
 
-.logo{
+.footer-logo{
     display: block;
     margin-bottom: 20px;
  font-family: 'Raleway';
@@ -26,60 +35,47 @@ line-height:1.19;
 letter-spacing: 0.03em;
 text-decoration:none ;
 color: #2196F3;
-}
-
-.studio{
+&__studio{
     color: #FFFFFF;
 }
-
-.address-link{
-    display: block;
-    font-family: Roboto;
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71; 
-letter-spacing: 0.03em; 
-color: #FFFFFF;
-margin-bottom: 9px;
-}   
-
-.contact-link{
-    display: block;
-    font-family: Roboto;
-font-style: normal;
-font-weight: 400;
-font-size: 14px;
-line-height: 1.71;
-letter-spacing: 0.03em;
- color: rgba(255, 255, 255, 0.6);
 }
 
- .contact-link:not(:last-child){
+.address {
+    &__link{
+        display: block;
+        font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71; 
+    letter-spacing: 0.03em; 
+    color: #FFFFFF;
     margin-bottom: 9px;
- }
+    }   
+    &__contact-link{
+        display: block;
+        font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+     color: rgba(255, 255, 255, 0.6);
+     &:not(:last-child){
+        margin-bottom: 9px;
+     }
+    }
+    
+}
 
- .footer-list {
+ .join-list {
     display: flex;
     width: 206px;
     justify-content: space-between;
- }
-
-.footer-title {
-    color: #FFF;
-font-size: 14px;
-font-weight: 700;
-line-height: normal;
-letter-spacing: 0.42px;
-text-transform: uppercase;
-margin-bottom: 20px;
-}
-
-.footer-list-link {
-     fill:#FFF;
-}
-
-.footer-list-item {
+    &__link {
+        fill:#FFF;
+   }
+   &__item {
     display: flex;
     fill:#FFF;
     border-radius: 50%;
@@ -89,10 +85,10 @@ margin-bottom: 20px;
     justify-content: center;
     align-items: center;
     transition: transform 400ms ease;
+    &:hover {
+        border-radius: 50%;
+        background-color: #2196F3;
+        transform: scale(1.2);
+    }
 }
-
-.footer-list-item:hover {
-    border-radius: 50%;
-    background-color: #2196F3;
-    transform: scale(1.2);
-}
+ }

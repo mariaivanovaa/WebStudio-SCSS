@@ -1,0 +1,31 @@
+.hero {
+    padding: 200px 0;
+    background-image: linear-gradient(to top, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/img.hero.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &__title{
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 900;
+        font-size: 44px;
+        line-height: 1.36;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+        }
+    &__btn{
+        display: block;
+        margin: 0 auto;
+    width: 216px;
+    height: 50px;
+    background: #2196F3;
+    color: #FFFFFF;
+    transition:  transform 500ms ease;
+    border: none;
+    border-radius: 4px;
+        &:hover {
+            transform: scale(1.2);
+        }
+    }
+    }
+

@@ -1,17 +1,16 @@
 .regular-customers{
     padding: 94px 0;
-
-}
-
-.customers-title {
-    font-weight: 700;
-font-size: 36px;
-line-height: 1.16;
-text-align: center;
-letter-spacing: 0.03em;
-
-margin-bottom: 50px;
-animation: customers-title 1s infinite;
+    &__title {
+        font-weight: 700;
+    font-size: 36px;
+    line-height: 1.16;
+    text-align: center;
+    letter-spacing: 0.03em;
+    
+    margin-bottom: 50px;
+    animation: customers-title 1s infinite;
+    }
+    
 }
 
 @keyframes customers-title{
@@ -29,29 +28,25 @@ animation: customers-title 1s infinite;
     justify-content: space-between;
     width: 1170px;
     margin: 0 auto;
-}
-
-.customers-list-item {
-    display: flex;
-    width: 170px;
-    height: 92px;
-    border: 1px solid #AFB1B8;
-    border-radius: 4px;
-    justify-content: center;
-    align-items: center;
-    transition: transform 500ms ease;
-}
-
-.customers-list-item:hover {
-    border: 1px solid #2196F3;
-    transform: scale(1.1);
-}
-
-.customers-list-link {
-    display: flex;
-    fill: #AFB1B8;
-}
-
-.customers-list-item:hover .customers-svg {
-    fill: #2196F3;
+    &__item {
+        display: flex;
+        width: 170px;
+        height: 92px;
+        border: 1px solid #AFB1B8;
+        border-radius: 4px;
+        justify-content: center;
+        align-items: center;
+        transition: transform 500ms ease;
+        &:hover {
+            border: 1px solid #2196F3;
+            transform: scale(1.1);
+        }   
+        &:hover .customers-list__svg {
+            fill: #2196F3;
+        }     
+    }
+    &__link {
+        display: flex;
+        fill: #AFB1B8;
+    }
 }
