@@ -15,38 +15,35 @@
 
 @keyframes customers-title{
     0% {
-        color: #212121;
+        color: getColor('title');
     }
 
     100%{
-        color: #757575;
+        color: getColor('text');
     }
 }
 
 .customers-list {
-    display: flex;
-    justify-content: space-between;
+    @include flex();
     width: 1170px;
     margin: 0 auto;
     &__item {
-        display: flex;
+        @include flex(center);
         width: 170px;
         height: 92px;
         border: 1px solid #AFB1B8;
         border-radius: 4px;
-        justify-content: center;
-        align-items: center;
         transition: transform 500ms ease;
         &:hover {
             border: 1px solid #2196F3;
             transform: scale(1.1);
         }   
         &:hover .customers-list__svg {
-            fill: #2196F3;
+            fill: getColor('hover');
         }     
     }
     &__link {
-        display: flex;
-        fill: #AFB1B8;
+        @include flex();
+        fill: getColor('svg');
     }
 }

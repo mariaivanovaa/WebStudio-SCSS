@@ -1,44 +1,35 @@
 .full-header {
+    @include flex();
     width: 1200px;
-    display: flex;
     margin: 0 auto;
-    justify-content: space-between;
     &__header-left{
         width: 519px;
     }
     &__header-right {  
-        display: flex;
-        justify-content: space-between;
+        @include flex();
         width: 333px;
-        align-items: center;
     }
 }
 
 .navigation {
-    display: flex;
-    justify-content: space-between;
+    @include flex();
 }
 
 .logo-link {
+    @include fonts(26px, 700);
     font-family: 'Raleway';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 26px;
-    line-height: 1.19;
     letter-spacing: 0.03em;
     text-decoration: none;
-    color:get-color('logo');
+    color:getColor('logo');
     padding: 24px 93px 25px 0;
     &__web {
-        color:get-color('logo');
+        color:getColor('hover');
     }
 }
 
 .nav-list {
-    display: flex;
-    justify-content: space-between;
+    @include flex();
     width: 281px;
-    align-items: center;
     font-weight: 500;
     font-size: 14px;
     line-height: 1.14;
@@ -48,52 +39,47 @@
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    color:get-color('title');
+    color:getColor('title');
     position: relative;
     &:hover, &:focus{
-        color:get-color('hover');
-    }
-    &:hover::after{
-        width: 100%;
-        transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+        color:getColor('hover');
     }
     &::after {
         content: "";
         width: 0;
         height: 4px;
-        background-color:  get-color('hover'); 
+        background-color:  getColor('hover'); 
         border-radius: 2px ;
         position: absolute;
         left: 0;
         top: 45px;
     }
+    &:hover::after{
+        width: 100%;
+        transition: width 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    }
     }
 }
 
 .contact-list-link {
-    display: flex;
-    justify-content: space-between;
+    @include flex();
     font-weight: 500;
     font-size: 14px;
     line-height:1.14;
     letter-spacing: 0.02em;
-    color: get-color('text');
+    color: getColor('text');
     &:hover {
-        color: get-color('hover');
+        color: getColor('hover');
         transition: color 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    }        
+    }     
+    &__contact-svg {
+        fill: #757575;
+        margin-right:10px;
+     }   
+     &:hover &__contact-svg{
+        fill: #2196F3;
+    }
 }
 
 
-
-.contact-list-link__contact-svg {
-   fill: #757575;
-   margin-right:10px;
-}
-
-.contact-list-link:hover .contact-list-link__contact-svg{
-    fill: #2196F3;
-}
-/* main */
-/* hero */
 

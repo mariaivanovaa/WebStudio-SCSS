@@ -5,13 +5,12 @@
     font-weight: 700;
     font-size: 36px;
     line-height: 1.16;
-    color: #212121;
+    color: getColor('title');
     }
 }
 
 .work-list{
-    display: flex;
-    justify-content:space-between;
+    @include flex();
     margin: 50px auto 0;
     width: 1200px;
     position: relative;
@@ -21,18 +20,15 @@
             overflow: hidden;
             &:nth-child(n)::after {
                 content: "Десктопні додатки";
-            
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            
+                @include flex(center);
+        
                 width: 370px;
                 height: 70px;
-                background-color: rgba(47, 48, 58, 0.80);
+                background-color: getColor('background-work');
             
-                color: #FFF;
+                color: getColor('white');
             text-align: center;
-            font-family: Roboto, sans-serif;
+            font-family: $primary-font; 
             font-size: 14px;
             font-style: normal;
             font-weight: 700;

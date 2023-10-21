@@ -10,7 +10,7 @@
         font-weight: 900;
         font-size: 44px;
         line-height: 1.36;
-        color: #FFFFFF;
+        color: getColor('white');
         margin-bottom: 30px;
         }
     &__btn{
@@ -18,8 +18,8 @@
         margin: 0 auto;
     width: 216px;
     height: 50px;
-    background: #2196F3;
-    color: #FFFFFF;
+    background: getColor('hover');
+    color: getColor('white');
     transition:  transform 500ms ease;
     border: none;
     border-radius: 4px;
@@ -28,4 +28,3 @@
         }
     }
     }
-

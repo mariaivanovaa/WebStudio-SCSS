@@ -1,11 +1,10 @@
 .footer-form {
-    display: flex;
-    align-items: flex-end;
+    @include flex($align-items:flex-end);
     &__label {
-        display: flex;
-        flex-direction: column;
-        color: #FFF;
-    font-family: Roboto;
+         @include flex($align-items:flex-start, $flex-dir:column);
+        
+        color: getColor('white');
+    font-family: $primary-font;
     font-size: 14px;
     font-style: normal;
     font-weight: 700;
@@ -16,21 +15,18 @@
     &__input {
         width: 358px;
     height: 50px;
-    background: #2F303A;
+    background-color: getColor('background-footer');
     border-radius: 4px;
     border: 1px solid rgba(255, 255, 255, 0.30);
-    background: rgba(33, 150, 243, 0.00);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
     margin-right: 12px;
     margin-top: 20px;
     &::placeholder {
-        display: flex;
+        @include flex(center, $flex-dir:column);
     width: 47px;
     height: 20px;
-    flex-direction: column;
-    justify-content: center;
     color: rgba(255, 255, 255, 0.60);
-    font-family: Roboto;
+    font-family: $primary-font;
     font-size: 16px;
     font-style: normal;
     font-weight: 400;
@@ -41,17 +37,15 @@
     
     }
     &__btn {
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include flex();
         width: 200px;
     height: 50px;
     border-radius: 4px;
-    background: #2196F3;
+    background-color:getColor('hover');
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    color: #FFF;
+    color: getColor('white');
     text-align: center;
-    font-family: "Roboto";
+    font-family: $primary-font;
     font-size: 16px;
     font-style: normal;
     font-weight: 700;
@@ -68,7 +62,7 @@
     
     }
     &__svg {
-        fill: #FFF;
+        fill: getColor('white');
         margin-left: 10px;
     }
 }

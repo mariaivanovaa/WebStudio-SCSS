@@ -1,12 +1,12 @@
 .footer-all {
-    display: flex;
+    @include flex(flex-start, flex-start);
     padding: 60px 0 60px 215px;
 }
 
 .footer-right {
     padding-top: 12px;
     &__title {
-        color: #FFF;
+        color: getColor('white');
     font-size: 14px;
     font-weight: 700;
     line-height: normal;
@@ -17,7 +17,7 @@
    }
      
 footer {
-        background-color: #2F303A;
+        background-color:getColor('background-footer');
     }
     
 .footer {
@@ -27,34 +27,34 @@ footer {
 .footer-logo{
     display: block;
     margin-bottom: 20px;
- font-family: 'Raleway';
+ font-family: $logo-font;
 font-style: normal;
 font-weight: 700;
 font-size: 26px;
 line-height:1.19;
 letter-spacing: 0.03em;
 text-decoration:none ;
-color: #2196F3;
+color: getColor('hover');
 &__studio{
-    color: #FFFFFF;
+    color: getColor('white');
 }
 }
 
 .address {
     &__link{
         display: block;
-        font-family: Roboto;
+        font-family: $primary-font;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
     line-height: 1.71; 
     letter-spacing: 0.03em; 
-    color: #FFFFFF;
+    color: getColor('white');
     margin-bottom: 9px;
     }   
     &__contact-link{
         display: block;
-        font-family: Roboto;
+        font-family: $primary-font;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -69,15 +69,14 @@ color: #2196F3;
 }
 
  .join-list {
-    display: flex;
+    @include flex();
     width: 206px;
-    justify-content: space-between;
     &__link {
-        fill:#FFF;
+        fill:getColor('white');
    }
    &__item {
-    display: flex;
-    fill:#FFF;
+    @include flex();
+    fill:getColor('white');
     border-radius: 50%;
     background-color:rgba(255, 255, 255, 10%);
     width: 44px;
@@ -87,7 +86,7 @@ color: #2196F3;
     transition: transform 400ms ease;
     &:hover {
         border-radius: 50%;
-        background-color: #2196F3;
+        background-color: getColor('hover');
         transform: scale(1.2);
     }
 }
