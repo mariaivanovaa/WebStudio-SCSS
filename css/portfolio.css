@@ -17,7 +17,24 @@ a {
 }
 
 .container {
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .container {
+    min-width: 320px;
+  }
+}
+
+.full-header {
+  width: 100%;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -71,16 +88,18 @@ a {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  width: 281px;
-  font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
+  width: 281px;
   letter-spacing: 0.02em;
 }
 .nav-list__link {
-  font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
   letter-spacing: 0.02em;
   color: #212121;
   position: relative;
@@ -109,9 +128,10 @@ a {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
-  font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  font-weight: 500;
+  line-height: normal;
+  font-style: normal;
   letter-spacing: 0.02em;
   color: #757575;
 }
@@ -136,18 +156,21 @@ a {
 .filters-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: nowrap;
   margin: 0 auto;
 }
 .filters-list__filter {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.62;
+  font-style: normal;
   padding: 6px 22px;
   background: #F5F4FA;
   border: none;
   border-radius: 4px;
   font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 1.62;
   text-align: center;
   letter-spacing: 0.03em;
   color: #212121;
@@ -168,10 +191,12 @@ a {
 .projects-list {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
   margin: 0 auto;
   width: 1170px;
   height: 1272px;
-  flex-wrap: wrap;
 }
 .projects-list__card {
   box-sizing: border-box;
@@ -202,18 +227,20 @@ a {
   margin-bottom: 20px;
 }
 .projects-list__title {
-  font-weight: 700;
   font-size: 18px;
+  font-weight: 700;
   line-height: 36px;
+  font-style: normal;
   letter-spacing: 0.06em;
   color: #212121;
   margin-bottom: 4px;
   padding: 0 24px;
 }
 .projects-list__text {
-  font-weight: 400;
   font-size: 16px;
+  font-weight: 400;
   line-height: 30px;
+  font-style: normal;
   letter-spacing: 0.03em;
   color: #757575;
   padding: 0 24px;
@@ -230,11 +257,11 @@ a {
   transform: translateY(-100%);
 }
 .overlay__text {
-  color: #fff;
   font-size: 18px;
-  font-style: normal;
   font-weight: 400;
   line-height: 1.55;
+  font-style: normal;
+  color: #fff;
   letter-spacing: 0.54px;
 }
 
@@ -251,10 +278,11 @@ a {
   padding-top: 12px;
 }
 .footer-right__title {
-  color: #fff;
   font-size: 14px;
   font-weight: 700;
   line-height: normal;
+  font-style: normal;
+  color: #fff;
   letter-spacing: 0.42px;
   text-transform: uppercase;
   margin-bottom: 20px;
@@ -269,13 +297,13 @@ footer {
 }
 
 .footer-logo {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: normal;
+  font-style: normal;
   display: block;
   margin-bottom: 20px;
   font-family: Raleway, sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 26px;
-  line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #2196F3;
@@ -285,23 +313,23 @@ footer {
 }
 
 .address__link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  font-style: normal;
   display: block;
   font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
   color: #fff;
   margin-bottom: 9px;
 }
 .address__contact-link {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.71;
+  font-style: normal;
   display: block;
   font-family: Roboto, sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
@@ -354,12 +382,12 @@ footer {
   align-items: flex-start;
   flex-direction: column;
   flex-wrap: nowrap;
-  color: #fff;
-  font-family: Roboto, sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: normal;
+  font-style: normal;
+  color: #fff;
+  font-family: Roboto, sans-serif;
   letter-spacing: 0.42px;
   text-transform: uppercase;
 }
@@ -379,14 +407,14 @@ footer {
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
   width: 47px;
   height: 20px;
   color: rgba(255, 255, 255, 0.6);
   font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 125% */
   letter-spacing: 0.48px;
   padding-left: 16px;
 }
@@ -396,14 +424,14 @@ footer {
   align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+  font-style: normal;
   width: 47px;
   height: 20px;
   color: rgba(255, 255, 255, 0.6);
   font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px; /* 125% */
   letter-spacing: 0.48px;
   padding-left: 16px;
 }
@@ -413,6 +441,10 @@ footer {
   align-items: center;
   flex-direction: row;
   flex-wrap: nowrap;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: normal;
+  font-style: normal;
   width: 200px;
   height: 50px;
   border-radius: 4px;
@@ -421,10 +453,6 @@ footer {
   color: #fff;
   text-align: center;
   font-family: Roboto, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 30px; /* 187.5% */
   letter-spacing: 0.96px;
   padding: 0;
   padding: 10px 28px;

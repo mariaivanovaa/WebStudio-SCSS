@@ -6,10 +6,8 @@
 .footer-right {
     padding-top: 12px;
     &__title {
+        @include fonts($font-weight:700);
         color: getColor('white');
-    font-size: 14px;
-    font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.42px;
     text-transform: uppercase;
     margin-bottom: 20px;
@@ -25,13 +23,10 @@ footer {
     }
 
 .footer-logo{
+    @include fonts(26px, 700);
     display: block;
     margin-bottom: 20px;
  font-family: $logo-font;
-font-style: normal;
-font-weight: 700;
-font-size: 26px;
-line-height:1.19;
 letter-spacing: 0.03em;
 text-decoration:none ;
 color: getColor('hover');
@@ -42,23 +37,17 @@ color: getColor('hover');
 
 .address {
     &__link{
+        @include fonts($line-height:1.71);
         display: block;
         font-family: $primary-font;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71; 
     letter-spacing: 0.03em; 
     color: getColor('white');
     margin-bottom: 9px;
     }   
     &__contact-link{
+        @include fonts($line-height:1.71);
         display: block;
         font-family: $primary-font;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.71;
     letter-spacing: 0.03em;
      color: rgba(255, 255, 255, 0.6);
      &:not(:last-child){
