@@ -202,7 +202,7 @@ header .inner-container {
 .header_menu-svg {
   width: 40px;
   height: 40px;
-  color: rgba(0, 0, 0, 0);
+  color: #000;
 }
 
 .header-right {
