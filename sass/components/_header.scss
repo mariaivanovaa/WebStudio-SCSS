@@ -1,18 +1,50 @@
-.full-header {
+header .inner-container {
     @include flex();
-    width: 1200px;
-    margin: 0 auto;
-    &__header-left{
-        width: 519px;
-    }
-    &__header-right {  
-        @include flex();
-        width: 333px;
+    @media screen and (max-width: 480px) {
+        min-width: 320px;
     }
 }
 
-.navigation {
+.header {
+    padding: 24px 0;
+    @media screen and (max-width:768px) {
+        padding: 21px 0;
+    }
+    @media screen and (max-width:480px) {
+        padding: 10px 0;
+    }
+    &_menu-btn{
+        display: none;
+        border: none;
+        background-color: transparent;
+        cursor: pointer;
+        @media screen and (max-width:767px){
+            display: block;
+        }
+    }
+    &_menu-svg{
+        width: 40px;
+        height: 40px;
+        color: #0000;
+    }
+}
+
+.header-right {  
     @include flex();
+    width: 333px;
+    @media screen and (max-width:1199px) {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        max-width: 138px;
+    }
+    @media screen and (max-width:767px) {
+        display: none;
+     }
+}
+
+.navigation {
+    width: 285px;
 }
 
 .logo-link {
@@ -21,16 +53,22 @@
     letter-spacing: 0.03em;
     text-decoration: none;
     color:getColor('logo');
-    padding: 24px 93px 25px 0;
+    @media screen and (max-width:768px) {
+        font-size: 24px;
+        letter-spacing: 0.72;
+    }
     &__web {
         color:getColor('hover');
     }
 }
 
 .nav-list {
+    @media screen and (max-width:767px) {
+       display: none;
+    }
     @include flex();
     @include fonts($font-weight:500);
-    width: 281px;
+    width: 100%;
     letter-spacing: 0.02em;
     &__link{
         @include fonts($font-weight:500);
@@ -58,6 +96,13 @@
 }
 
 .contact-list-link {
+    @media screen and (max-width:1199px) {
+       letter-spacing: 0.24;
+
+       @include fonts(12px, 500)
+    }
+
+    
     @include flex();
     @include fonts($font-weight:500);
     letter-spacing: 0.02em;

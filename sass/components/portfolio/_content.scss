@@ -1,20 +1,26 @@
-.content{
-    padding-bottom: 94px;
-}
-
 .projects-list{
     @include flex($wrap:wrap);
-    margin: 0 auto;
-    width: 1170px;
-    height: 1272px;
-    &__card{
+    width: 100%;
+    gap: 30px;
+    @media screen and (max-width: 480px) {
+        @include flex ($justify-content:center, $wrap:wrap)
+    }
+    &__item{
         box-sizing: border-box;
         width: 370px;
-    height: 404px;
     background-color:getColor('white');
     border: 1px solid #EEEEEE;
     padding-bottom: 20px;
     overflow: hidden;
+    @media screen and (max-width: 1199px) {
+        width: 354px;
+        }
+        @media screen and (max-width: 767px) {
+        width: 450px;
+        }
+        @media screen and (max-width: 480px) {
+        min-width: 320px;
+        }
     &:hover .overlay {
         transform: translateY(0);
         transition: transform 1s ease;
@@ -25,6 +31,15 @@
         height: 294px ;
         position: relative;
         margin-bottom: 20px;
+        @media screen and (max-width: 1199px) {
+        width: 354px;
+        }
+        @media screen and (max-width: 767px) {
+        width: 450px;
+        }
+        @media screen and (max-width: 480px) {
+        min-width: 320px;
+        }
     }
     &__img{
         width: 100%;

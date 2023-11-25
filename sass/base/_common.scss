@@ -13,7 +13,7 @@ a {
     text-decoration: none;
 }
 
-.container {
+.outer-container {
     width:100%;
     max-width: 1600px;
     margin: 0 auto;
@@ -24,10 +24,21 @@ a {
         min-width: 320px;
     }
 }
-.full-header {
+
+.inner-container {
     width:100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0 15px;
+    @media screen and (max-width: 1199px) {
+        max-width: 768px;
+    }
+    @media screen and (max-width: 767px) {
+        max-width: 480px;
+    }
+    @media screen and (max-width: 480px) {
+        min-width: 320px; 
+    }
 }
 
 

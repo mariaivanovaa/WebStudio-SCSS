@@ -1,11 +1,36 @@
-.filters{
-    width: 575px;
-    margin: 0 auto;
-    padding: 94px 0 34px 0;
+.main {
+    padding: 94px 0;
+    @media screen and (max-width: 1199px) {
+        padding: 60px 0;
+    }
 }
+
+.main .inner-container {
+    padding: 0;
+    @media screen and (max-width: 1199px) {
+        max-width: 768px;
+    }
+    @media screen and (max-width: 767px) {
+        max-width: 480px;
+    }
+    @media screen and (max-width: 480px) {
+        max-width: 420px; 
+    }
+    }
+
 .filters-list{
     @include flex();
-    margin: 0 auto;
+    width: 575px;
+    gap: 8px;
+    margin: 0 auto 50px;
+    @media screen and (max-width: 1199px) {
+        margin: 0 auto 30px;
+    }
+    @media screen and (max-width: 767px) {
+        margin: 0 0 40px;
+        max-width: 326px;
+        @include flex($justify-content:flex-start, $wrap:wrap)
+    }
     &__filter{
         @include fonts(16px, 500, 1.62);
         padding: 6px 22px;

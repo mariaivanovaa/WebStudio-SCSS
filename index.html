@@ -17,20 +17,21 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="full-header">
-                <div class="full-header__header-left">
+    <div class="outer-container">
+        <header class="header">
+            <div class="inner-container">
+            <!-- <div class="full-header"> -->
+                <!-- <div class="full-header__header-left"> -->
+                    <a class="logo-link" href="./index.html"><span class="logo-link__web">Web</span>Studio</a>
                 <nav class="navigation">
-                        <a class="logo-link" href="./index.html"><span class="logo-link__web">Web</span>Studio</a>
                         <ul class="nav-list">
                             <li class="nav-list__item"><a class="nav-list__link" href="./index.html">Студія</a></li>
                             <li class="nav-list__item"><a class="nav-list__link" href="./portfolio.html">Портфоліо</a></li>
                             <li class="nav-list__item"><a class="nav-list__link" href="#">Контакти</a></li>
                         </ul>
                     </nav>
-                </div>
-                <div class="full-header__header-right">
+                <!-- </div> -->
+                <div class="header-right">
                     <a class="contact-list-link" href="mailto:info@devstudio.com">
                         <svg width="16" height="12" class="contact-list-link__contact-svg"> 
                            <use href="./images/icons/symbol-defs.svg#icon-email">
@@ -39,20 +40,29 @@
                         info@devstudio.com</a>
                     <a class="contact-list-link" href="tel:+380961111111">
                         <svg width="10" height="16" class="contact-list-link__contact-svg">
-                            <use href="./images/icons/symbol-defs.svg#icon-smartphone">
+                            <use href="./images/icons/menu.svg">
                             </use>
                         </svg>
                         +38 096 111 11 11</a>
                 </div>
-            </div>
+            <!-- </div> -->
+            <button type="button" class="header_menu-btn" data-open-Menu>
+                <svg class="header_menu-svg">
+                    <use href="./images/icons/symbol-defs.svg#icon-close-black"></use>
+                </svg>
+            </button>
+        </div>
+       
+    </div>
         </header>
          <main> 
-             <section class="hero">
+              <section class="hero">
                 <h1 class="hero__title animate__fadeIn animate__animated" >Ефективні рішення для <br> вашого бізнесу</h1>
                 <button class="hero__btn" type="button" data-modal-open>Замовити послугу</button>
             </section> 
 
-             <section class="features">
+              <section class="features">
+                <div class="inner-container">
                 <ul class="features-list">
                     <li class="features-list__item">
                         <h3 class="features-list__title">УВАГА ДО ДЕТАЛЕЙ</h3>
@@ -76,9 +86,11 @@
                             завдань.</p>
                     </li>
                 </ul>
-            </section> 
+            </div>
+            </section>  
 
-            <section class="work" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="linear">
+             <section class="work" data-aos="fade-down" data-aos-duration="2000" data-aos-easing="linear">
+                <div class="inner-container">
                 <h2 class="work__title">Чим ми займаємося</h2>
                 <ul class="work-list">
                     <li class="work-list__thumb">
@@ -91,10 +103,12 @@
                             <img class="work-list__img" src="./images/img(3).jpg" alt="colors">
                     </li>
                 </ul>
+            </div>
             </section> 
 
            
-                 <section class="team">
+                  <section class="team">
+                    <div class="inner-container">
                     <h2 class="team__title animate__flipInX animate__animated">Наша команда</h2>
                     <ul class="team-list">
                        
@@ -278,9 +292,11 @@
                             </li>
                        
                     </ul>
+                    </div>
                 </section>
 
-            <section class="regular-customers">
+           <section class="regular-customers">
+            <div class="inner-container">
 <h2 class="regular-customers__title">Постійні клієнти</h2>
 <ul class="customers-list">
     <li class="customers-list__item">
@@ -326,12 +342,14 @@
         </a>
     </li>
 </ul>
+</div>
             </section> 
 
 
         </main> 
 
-       <footer class=footer-all>
+        <footer class=footer-all>
+            <div class="inner-container">
             <section class="footer">
                 <a class="footer-logo" href="./index.html">Web<span class="footer-logo__studio">Studio</span></a>
                 <address class="address">
@@ -389,8 +407,9 @@
                 </button>
             </form>
             </section>
-        </footer> 
-    </div>
+        </div>
+         </footer> 
+     </div>
 
 
 
@@ -441,9 +460,61 @@
                 
                     <button type="submit" class="modal__btn">Відправити</button>
         </form>
-    </div>
+    </div> 
 
-    
+
+
+
+
+
+    <div class="menu is-hidden">
+        <button class="menu_close-btn" type="button" data-close-menu>
+                <svg class="menu_close-svg">
+                    <use href="./images/icons/symbol-defs.svg#icon-close-black"></use>
+                </svg>
+        </button>
+        <ul class="pages-list">
+            <li class="pages-list_item">
+                <a href="./index.html" class="pages-list_link">Студія</a>
+            </li>
+            <li class="pages-list_item">
+                <a href="./portfolio.html"  class="pages-list_link">Портфоліо</a>
+            </li>
+            <li class="pages-list_item">
+                <a href="#"  class="pages-list_link">Контакти</a>
+            </li>
+        </ul>
+
+       <ul class="contacts-list">
+        <li class="contacts-list_item">
+            <a href="tel:+38 096 111 11 11" class="contacts-list_link contacts-list_link--tel">+38 096 111 11 11</a>
+        </li>
+        <li class="contacts-list_item">
+            <a href="mailto:info@devstudio.com" class="contacts-list_link contacts-list_link--mail">info@devstudio.com</a>
+        </li>
+       </ul>
+
+       <ul class="soc-list">
+        <li class="soc-list_item">
+            <a href="#" class="soc-list_link">Instagram</a>
+        </li>
+        <li class="soc-list_item"><span class="soc-list_span">|</span></li>
+        <li class="soc-list_item">
+            <a href="#" class="soc-list_link">Twitter</a>
+        </li>
+        <li class="soc-list_item"><span class="soc-list_span">|</span></li>
+        <li class="soc-list_item">
+            <a href="#" class="soc-list_link">Facebook</a>
+        </li>
+        <li class="soc-list_item"><span class="soc-list_span">|</span></li>
+        <li class="soc-list_item">
+            <a href="#" class="soc-list_link">LinkedIn</a>
+        </li>
+       </ul>
+
+    </div>
+            
+    <script src="./js/mobile-menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
