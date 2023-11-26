@@ -13,7 +13,7 @@ header .inner-container {
     @media screen and (max-width:480px) {
         padding: 10px 0;
     }
-    &_menu-btn{
+    &__menu-btn{
         display: none;
         border: none;
         background-color: transparent;
@@ -22,10 +22,10 @@ header .inner-container {
             display: block;
         }
     }
-    &_menu-svg{
+    &__menu-svg{
         width: 40px;
         height: 40px;
-        color: #000;
+        fill: #000;
     }
 }
 
